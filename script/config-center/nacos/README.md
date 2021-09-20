@@ -1,0 +1,1 @@
+sh nacos-config.sh -h localhost -p 8848 -g SEATA_GROUP -t seata
