@@ -23,7 +23,8 @@ transport.serialization=seata
 transport.compressor=none
 
 #Transaction routing rules configuration, only for the client
-service.vgroupMapping.default_tx_group=default
+service.vgroupMapping.my_test_tx_group=default
+#service.vgroupMapping.default_tx_group=default
 #If you use a registry, you can ignore it
 service.default.grouplist=127.0.0.1:8091
 service.enableDegrade=false
@@ -67,11 +68,11 @@ tcc.fence.cleanPeriod=1h
 log.exceptionRate=100
 
 #Transaction storage configuration, only for the server. The file, DB, and redis configuration values are optional.
-store.mode=file
+store.mode=nacos
 store.lock.mode=file
 store.session.mode=file
 #Used for password encryption
-store.publicKey=
+#store.publicKey=
 
 #If `store.mode,store.lock.mode,store.session.mode` are not equal to `file`, you can remove the configuration block.
 store.file.dir=file_store/data
@@ -101,13 +102,13 @@ store.db.maxWait=5000
 store.redis.mode=single
 store.redis.single.host=127.0.0.1
 store.redis.single.port=6379
-store.redis.sentinel.masterName=
-store.redis.sentinel.sentinelHosts=
+#store.redis.sentinel.masterName=
+#store.redis.sentinel.sentinelHosts=
 store.redis.maxConn=10
 store.redis.minConn=1
 store.redis.maxTotal=100
 store.redis.database=0
-store.redis.password=
+#store.redis.password=
 store.redis.queryLimit=100
 
 #Transaction rule configuration, only for the server

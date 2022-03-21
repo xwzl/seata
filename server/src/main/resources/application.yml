@@ -24,14 +24,32 @@ console:
 seata:
   config:
     # support: nacos, consul, apollo, zk, etcd3
-    type: file
+    type: nacos
+    nacos:
+      server-addr: 127.0.0.1:8848
+      group: SEATA_GROUP
+      namespace: seata
   registry:
     # support: nacos, eureka, redis, zk, consul, etcd3, sofa
-    type: file
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: 127.0.0.1:8848
+      group: SEATA_GROUP
+      namespace: seata-server
+    preferred-networks: 127.0.0.1
   store:
     # support: file 、 db 、 redis
-    mode: file
-#  server:
+    mode: db
+    db:
+      url: jdbc:mysql://127.0.0.1:3306/seata?rewriteBatchedStatements=true"
+      user: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      datasource: druid
+      db-type: mysql
+
+  #  server:
 #    service-port: 8091 #If not configured, the default is '${server.port} + 1000'
   security:
     secretKey: SeataSecretKey0c382ef121d778043159209298fd40bf3850a017

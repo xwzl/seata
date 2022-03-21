@@ -59,6 +59,7 @@ Are you sure to continue? [y/n]
 - Non-Interactive Mode
 
 ```bash
+sh nacos-config.sh -h localhost -p 8848 -g SEATA_GROUP -t test -u username -w password
 sh ${SEATAPATH}/script/config-center/nacos/nacos-config.sh -h localhost -p 8848 -g SEATA_GROUP -t 5a3c7d6c-f497-4d68-a71a-2e5e3340b3ca -u username -w password
 ```
 
