@@ -26,7 +26,7 @@ transport.compressor=none
 service.vgroupMapping.my_test_tx_group=default
 #service.vgroupMapping.default_tx_group=default
 #If you use a registry, you can ignore it
-service.default.grouplist=127.0.0.1:8091
+service.default.grouplist=1.15.19.68:8091
 service.enableDegrade=false
 service.disableGlobalTransaction=false
 
@@ -86,7 +86,7 @@ store.file.sessionReloadReadSize=100
 store.db.datasource=druid
 store.db.dbType=mysql
 store.db.driverClassName=com.mysql.cj.jdbc.Driver
-store.db.url=jdbc:mysql://127.0.0.1:3306/seata?useUnicode=true&rewriteBatchedStatements=true
+store.db.url=jdbc:mysql://1.15.19.68:3306/seata?useUnicode=true&rewriteBatchedStatements=true
 store.db.user=root
 store.db.password=root
 store.db.minConn=5
@@ -100,7 +100,7 @@ store.db.maxWait=5000
 
 #These configurations are required if the `store mode` is `redis`. If `store.mode,store.lock.mode,store.session.mode` are not equal to `redis`, you can remove the configuration block.
 store.redis.mode=single
-store.redis.single.host=127.0.0.1
+store.redis.single.host=1.15.19.68
 store.redis.single.port=6379
 #store.redis.sentinel.masterName=
 #store.redis.sentinel.sentinelHosts=

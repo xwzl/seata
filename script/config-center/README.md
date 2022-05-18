@@ -273,4 +273,4 @@ Parameter Description:
 
 -z: zk path.
 
-sh nacos-config.sh -h localhost -p 8848 -g SEATA_GROUP -t seata
+sh nacos-config.sh -h 1.15.19.68 -p 8848 -g SEATA_GROUP -t seata
